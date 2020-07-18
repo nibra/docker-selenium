@@ -1,3 +1,6 @@
-/tests/screenshots/*
+/tests/screenshots/
 !/tests/screenshots/.gitkeep
+/sql/
+!/sql/.gitkeep
 .phpunit.result.cache
+/lib/viewer.jar

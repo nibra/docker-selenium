@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nibralab Test Environment</title>
+</head>
+<body>
+<h1>nibralab Test Environment</h1>
+<h2>Selenium Hub</h2>
+<a href="http://{{ hub.host }}:{{ hub.port }}/grid/console" target="_blank">Selenium Grid Console</a>
+<ul>
+    {% for node in nodes %}
+    <li>
+        <h2>Node {{ node.host }}</h2>
+        <ul>
+            <li>
+                <a href="http://{{ node.host }}:{{ node.port }}" target="_blank">Selenium Node Console</a>
+            </li>
+            <li>
+                <a href="http://{{ node.host }}:{{ node.port }}" target="_blank">Node Screen (VNC)</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>

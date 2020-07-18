@@ -6,8 +6,11 @@
 - [Selenium Grid]() ([Firefox](), [Chrome]())
 - [PHP Webdriver](https://packagist.org/packages/php-webdriver/webdriver)
 - [ParaTest](https://github.com/brianium/paratest)
+- [VNC Thumbnail Viewer](https://thetechnologyteacher.wordpress.com/vncthumbnailviewer/)
 
-## Grid Console
+## Monitoring the Tests
+
+### Grid Console
 
 To see the Selenium grid console, navigate to
 
@@ -17,14 +20,16 @@ http://localhost:4444/grid/console
 
 with your browser.
 
-## See it Work
+### See it Work
 
-Get the IP address for the node that you want to watch from the grid console, e.g., `172.31.0.5`.
-In a terminal, enter
+To see the screens of node containers, use
 
 ```bash
-$ vncviewer 172.31.0.5:0
+$ bin/view.php
 ```
 
-`vncviewer` will ask for a password, which is just `secret`.
-This will open a new window showing the screen contents of that instance.
+It will open a new window with the downscaled screens of all nodes registered to the Selenium Hub.
+
+![VNC Thumbnail Viewer](docs/assets/vncviewer.png)
+
+Right-clicking into one of the thumbnails will open that screen in full size.

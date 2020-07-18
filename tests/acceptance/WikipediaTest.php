@@ -3,50 +3,15 @@
 use Facebook\WebDriver\Cookie;
 use Facebook\WebDriver\Exception\NoSuchElementException;
 use Facebook\WebDriver\Exception\TimeoutException;
-use Facebook\WebDriver\Remote\DesiredCapabilities;
-use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
-use PHPUnit\Framework\TestCase;
+use NX\Test\Common\TestCase;
 
 class WikipediaTest extends TestCase
 {
     /**
-     * @var RemoteWebDriver
-     */
-    private static $driver;
-
-    /**
-     * @var string
-     */
-    private $screenshots;
-
-    public static function setUpBeforeClass(): void
-    {
-        parent::setUpBeforeClass();
-
-        $host         = 'http://localhost:4444/wd/hub';
-        $capabilities = DesiredCapabilities::firefox();
-        self::$driver = RemoteWebDriver::create($host, $capabilities);
-    }
-
-    public function setUp(): void
-    {
-        parent::setUp();
-
-        $this->screenshots = dirname(__DIR__) . '/screenshots/';
-    }
-
-    public static function tearDownAfterClass(): void
-    {
-        self::$driver->quit();
-
-        parent::tearDownAfterClass();
-    }
-
-    /**
      * @testdox Search for 'PHP' leads to PHP entry of Wikipedia
-     *          
+     *
      * @throws NoSuchElementException
      * @throws TimeoutException
      */
@@ -74,7 +39,7 @@ class WikipediaTest extends TestCase
 
     /**
      * @testdox Clicking on the 'history' button opens the Revision History
-     *          
+     *
      * @throws NoSuchElementException
      * @throws TimeoutException
      */

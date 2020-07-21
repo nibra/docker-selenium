@@ -2,14 +2,15 @@
     "autoload": {
         "psr-4": {
             "NX\\": "src",
-            "NX\\Test\\": "tests"
+            "NX\\Test\\Unit\\": "tests/unit"
         }
     },
     "require": {
         "phpunit/phpunit": "^8.5",
         "brianium/paratest": "^4.0",
         "php-webdriver/webdriver": "^1.8",
-        "twig/twig": "^3.0"
+        "twig/twig": "^3.0",
+        "symfony/yaml": "^5.1"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",

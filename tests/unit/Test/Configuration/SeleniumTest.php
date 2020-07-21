@@ -1,20 +1,20 @@
 <?php
 
-namespace NX\Test;
+namespace NX\Test\Unit\Configuration;
 
-use NX\Test\Selenium\Configuration;
+use NX\Test\Configuration\Selenium;
 use PHPUnit\Framework\TestCase;
 
-class ConfigurationTest extends TestCase
+class SeleniumTest extends TestCase
 {
     /**
-     * @var Configuration|__anonymous@208
+     * @var Selenium|__anonymous@208
      */
     private $subject;
 
     public function setUp(): void
     {
-        $this->subject = new class extends Configuration {
+        $this->subject = new class extends Selenium {
             public function parseCapabilities(string $value): array
             {
                 return parent::parseCapabilities($value);

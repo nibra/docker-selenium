@@ -1,9 +1,10 @@
 # Test Environment
 
-## Tools contained in the test environment:
+## Tools Contained in the Test Environment
 
-- [PHPUnit]()
-- [Selenium Grid]() ([Firefox](), [Chrome]())
+- [Docker](https://www.docker.com/) (with [Docker Compose](https://docs.docker.com/compose/))
+- [PHPUnit](https://phpunit.de/)
+- [Selenium Grid](https://www.selenium.dev/documentation/en/grid/) 3 (with [Firefox](https://hub.docker.com/r/selenium/node-firefox-debug), [Chrome](https://hub.docker.com/r/selenium/node-chrome-debug), [Opera](https://hub.docker.com/r/selenium/node-opera-debug) nodes)
 - [PHP Webdriver](https://packagist.org/packages/php-webdriver/webdriver)
 - [ParaTest](https://github.com/brianium/paratest)
 - [VNC Thumbnail Viewer](https://thetechnologyteacher.wordpress.com/vncthumbnailviewer/)

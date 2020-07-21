@@ -1,8 +1,8 @@
 <?php
 
-namespace NX\Test\Selenium;
+namespace NX\Test\Configuration;
 
-class Configuration
+class Selenium
 {
     /**
      * Get the configuration of the hub and registered nodes

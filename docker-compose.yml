@@ -17,6 +17,9 @@ services:
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+    shm_size: 2gb
 
   firefox:
     image: selenium/node-firefox-debug
@@ -27,6 +30,9 @@ services:
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+    shm_size: 2gb
 
   opera:
     image: selenium/node-opera-debug
@@ -37,3 +43,6 @@ services:
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+    shm_size: 2gb
